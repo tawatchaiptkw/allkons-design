@@ -1,0 +1,157 @@
+/* Allkons Design System - Token Import Order
+ * CRITICAL: Do not change the import order
+ * Layer 1: Primitive tokens (raw hex values)
+ * Layer 2: Alias tokens (semantic families)
+ * Layer 3: Mapped tokens (component/system tokens)
+ * Layer 4: Typography tokens (responsive)
+ */
+
+@import './01-primitive.css';
+@import './02-alias.css';
+@import './03-mapped-light.css';
+@import './04-typography.css';
+@import './05-utilities.css';
+/* --- Premium Radio Styling (Triple-Ring Effect) --- */
+
+.ant-radio-wrapper {
+    display: inline-flex;
+    align-items: flex-start;
+    /* Align with top of text */
+    gap: 0;
+    margin-bottom: 0;
+}
+
+.ant-radio {
+    top: 0.25em;
+    /* Nudge down for better alignment with text */
+}
+
+/* Base Radio Style */
+.ant-radio .ant-radio-inner {
+    background-color: transparent;
+    border-color: var(--border-secondary);
+    border-width: 1px;
+    width: var(--component-radio-size-md);
+    height: var(--component-radio-size-md);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover State */
+.ant-radio-wrapper:hover .ant-radio-inner {
+    border-color: var(--background-brand-default);
+    box-shadow: 0 0 0 4px var(--background-brand-subtle);
+}
+
+/* Checked State - The Triple Ring */
+.ant-radio-checked .ant-radio-inner {
+    border-color: var(--component-radio-checked-color) !important;
+    background-color: transparent !important;
+    border-width: var(--component-radio-checked-border-width) !important;
+}
+
+/* Focused State Halo (persistent when selected if needed) */
+.ant-radio-checked.ant-radio-wrapper:hover .ant-radio-inner {
+    box-shadow: 0 0 0 4px var(--background-brand-subtle);
+}
+
+/* The white gap and inner dot */
+.ant-radio-checked .ant-radio-inner::after {
+    transform: translate(-50%, -50%) scale(1) !important;
+    opacity: 1 !important;
+    background-color: var(--component-radio-checked-dot-color) !important;
+    width: var(--component-radio-dot-size-md) !important;
+    height: var(--component-radio-dot-size-md) !important;
+    top: 50% !important;
+    left: 50% !important;
+    margin: 0 !important;
+    /* Creating the white gap effect using a border on the pseudo-element */
+    border: 2px solid var(--background-primary);
+    box-sizing: content-box;
+    border-radius: 50%;
+}
+
+/* Size Variants */
+.vibe-radio-sm .ant-radio-inner {
+    width: var(--component-radio-size-sm);
+    height: var(--component-radio-size-sm);
+}
+
+.vibe-radio-sm .ant-radio-checked .ant-radio-inner::after {
+    width: var(--component-radio-dot-size-sm) !important;
+    height: var(--component-radio-dot-size-sm) !important;
+}
+
+.vibe-radio-lg .ant-radio-inner {
+    width: var(--component-radio-size-lg);
+    height: var(--component-radio-size-lg);
+}
+
+.vibe-radio-lg .ant-radio-checked .ant-radio-inner::after {
+    width: var(--component-radio-dot-size-lg) !important;
+    height: var(--component-radio-dot-size-lg) !important;
+}
+
+/* Disabled State */
+.ant-radio-disabled .ant-radio-inner {
+    background-color: var(--background-secondary) !important;
+    border-color: var(--border-disabled) !important;
+}
+
+.ant-radio-disabled.ant-radio-checked .ant-radio-inner::after {
+    background-color: var(--text-disabled) !important;
+}
+
+/* --- Checkbox Styling --- */
+
+.ant-checkbox-wrapper {
+    display: inline-flex;
+    align-items: flex-start;
+    /* Align with top of text */
+    gap: 0;
+}
+
+.ant-checkbox {
+    top: 0.25em;
+    /* Nudge down for better alignment with text */
+}
+
+.ant-checkbox .ant-checkbox-inner {
+    width: var(--component-checkbox-size-md);
+    height: var(--component-checkbox-size-md);
+    border-radius: 4px;
+}
+
+/* Size Variants */
+.vibe-checkbox-sm .ant-checkbox-inner {
+    width: var(--component-checkbox-size-sm);
+    height: var(--component-checkbox-size-sm);
+}
+
+.vibe-checkbox-lg .ant-checkbox-inner {
+    width: var(--component-checkbox-size-lg);
+    height: var(--component-checkbox-size-lg);
+}
+
+/* Disabled State */
+.ant-checkbox-disabled .ant-checkbox-inner {
+    background-color: var(--background-secondary) !important;
+    border-color: var(--border-disabled) !important;
+}
+
+/* --- Feedback Banner Icon Color Alignment --- */
+
+.ant-alert-success .ant-alert-icon {
+    color: var(--icon-success-default) !important;
+}
+
+.ant-alert-info .ant-alert-icon {
+    color: var(--icon-info-default) !important;
+}
+
+.ant-alert-warning .ant-alert-icon {
+    color: var(--icon-warning-default) !important;
+}
+
+.ant-alert-error .ant-alert-icon {
+    color: var(--icon-error-default) !important;
+}

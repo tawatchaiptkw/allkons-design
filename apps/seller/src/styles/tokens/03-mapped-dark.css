@@ -1,0 +1,14 @@
+/* Placeholder for dark mode mapped tokens
+ * To enable dark mode:
+ * 1. Add dark mode mapped tokens here
+ * 2. Use html[data-theme="dark"] selector
+ * 3. Import this file conditionally or use CSS @media (prefers-color-scheme: dark)
+ */
+
+html[data-theme="dark"] {
+    /* Dark mode tokens will go here */
+    /* Example:
+  --text-primary: var(--global-neutral-90);
+  --background-primary: var(--global-neutral--95);
+  */
+}

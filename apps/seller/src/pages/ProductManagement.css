@@ -1,0 +1,28 @@
+.product-management {
+    padding: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.product-header h3 {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .product-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .product-header button {
+        width: 100%;
+    }
+}

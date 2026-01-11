@@ -1,0 +1,190 @@
+.vibe-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    gap: 6px;
+    vertical-align: middle;
+}
+
+/* Sizes */
+.vibe-badge--sm {
+    padding: 2px 8px;
+    font-size: 12px;
+    height: 20px;
+}
+
+.vibe-badge--md {
+    padding: 4px 10px;
+    font-size: 13px;
+    height: 24px;
+}
+
+.vibe-badge--lg {
+    padding: 6px 14px;
+    font-size: 14px;
+    height: 32px;
+}
+
+/* Shapes */
+.vibe-badge--rounded {
+    border-radius: var(--radius-xs, 4px);
+}
+
+.vibe-badge--pill {
+    border-radius: var(--radius-full, 999px);
+}
+
+/* Icons & Dot */
+.vibe-badge__icon {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.vibe-badge__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: currentColor;
+    flex-shrink: 0;
+}
+
+.vibe-badge__close {
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    color: inherit;
+    margin-left: -2px;
+}
+
+.vibe-badge__close:hover {
+    opacity: 1;
+}
+
+/* Color Variables Mapping */
+
+/* Filled Variant */
+.vibe-badge--filled.vibe-badge--brand {
+    background: var(--background-brand-default);
+    color: var(--text-white);
+    border: 1px solid var(--background-brand-default);
+}
+
+.vibe-badge--filled.vibe-badge--neutral {
+    background: var(--background-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-primary);
+}
+
+.vibe-badge--filled.vibe-badge--success {
+    background: var(--background-success-default);
+    color: var(--text-white);
+    border: 1px solid var(--background-success-default);
+}
+
+.vibe-badge--filled.vibe-badge--warning {
+    background: var(--background-warning-default);
+    color: var(--text-white);
+    border: 1px solid var(--background-warning-default);
+}
+
+.vibe-badge--filled.vibe-badge--error {
+    background: var(--background-error-default);
+    color: var(--text-white);
+    border: 1px solid var(--background-error-default);
+}
+
+.vibe-badge--filled.vibe-badge--info {
+    background: var(--background-info-default);
+    color: var(--text-white);
+    border: 1px solid var(--background-info-default);
+}
+
+/* Outlined Variant */
+.vibe-badge--outlined {
+    background: transparent;
+}
+
+.vibe-badge--outlined.vibe-badge--brand {
+    color: var(--text-brand-default);
+    border: 1px solid var(--border-brand-default);
+}
+
+.vibe-badge--outlined.vibe-badge--neutral {
+    color: var(--text-secondary);
+    border: 1px solid var(--border-primary);
+}
+
+.vibe-badge--outlined.vibe-badge--success {
+    color: var(--text-success-default);
+    border: 1px solid var(--border-success-default);
+}
+
+.vibe-badge--outlined.vibe-badge--warning {
+    color: var(--text-warning-default);
+    border: 1px solid var(--border-warning-default);
+}
+
+.vibe-badge--outlined.vibe-badge--error {
+    color: var(--text-error-default);
+    border: 1px solid var(--border-error-default);
+}
+
+.vibe-badge--outlined.vibe-badge--info {
+    color: var(--text-info-default);
+    border: 1px solid var(--border-info-default);
+}
+
+/* Subtle Variant */
+.vibe-badge--subtle.vibe-badge--brand {
+    background: var(--background-brand-subtle);
+    color: var(--text-brand-default);
+    border: 1px solid transparent;
+}
+
+.vibe-badge--subtle.vibe-badge--neutral {
+    background: var(--background-secondary);
+    color: var(--text-secondary);
+    border: 1px solid transparent;
+}
+
+.vibe-badge--subtle.vibe-badge--success {
+    background: var(--background-success-subtle);
+    color: var(--text-success-default);
+    border: 1px solid transparent;
+}
+
+.vibe-badge--subtle.vibe-badge--warning {
+    background: var(--background-warning-subtle);
+    color: var(--text-warning-default);
+    border: 1px solid transparent;
+}
+
+.vibe-badge--subtle.vibe-badge--error {
+    background: var(--background-error-subtle);
+    color: var(--text-error-default);
+    border: 1px solid transparent;
+}
+
+.vibe-badge--subtle.vibe-badge--info {
+    background: var(--background-info-subtle);
+    color: var(--text-info-default);
+    border: 1px solid transparent;
+}
+
+/* Dark Preview Support */
+.dark-preview-container .vibe-badge--subtle {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
