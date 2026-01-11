@@ -39,7 +39,7 @@ export default function SellerLogin() {
                 otp: values.otp,
             });
 
-            const { accessToken, user } = response.data.data;
+            const { accessToken } = response.data.data;
             localStorage.setItem('accessToken', accessToken);
 
             // Fetch profile bootstrap to determine routing

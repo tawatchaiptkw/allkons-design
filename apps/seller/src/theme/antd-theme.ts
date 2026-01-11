@@ -37,7 +37,6 @@ export const antdTheme: ThemeConfig = {
 
         // Line Height
         lineHeight: 1.5,
-        lineHeightHeading: 1.2,
     },
 
     components: {

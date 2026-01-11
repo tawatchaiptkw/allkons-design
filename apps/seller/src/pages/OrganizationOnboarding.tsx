@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { Form, Input, Button, Typography, Select, Modal, Checkbox, message } from 'antd';
+import { Form, Input, Button, Typography, Select, Modal, message } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { apiClient } from '../lib/api-client';
 import './OrganizationOnboarding.css';
 
-const { Title, Text, Paragraph } = Typography;
+const { Title, Paragraph } = Typography;
 const { Option } = Select;
 
 type BusinessType = 'INDIVIDUAL' | 'REGISTERED_BUSINESS' | 'JURISTIC';
